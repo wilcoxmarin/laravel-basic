@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>Prueba</h1>
+<p>Controllador de prueba</p>
+<!-- START_d0737fa8cfaf9ee16dc9becbb3085fd9 -->
+<h2>* Create a user</h2>
+<p>[Insert optional longer description of the API endpoint here.]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/prueba" \
+    -H "Content-Type: application/json" \
+    -d '{"user_id":9,"room_id":"et","forever":false,"another_one":3990610.13639,"yet_another_param":{"name":"amet"},"even_more_param":[160895437.203],"book":{"name":"ipsam","author_id":13,"pages_count":12},"ids":[18],"users":[{"first_name":"John","last_name":"Doe"}]}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/prueba");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "user_id": 9,
+    "room_id": "et",
+    "forever": false,
+    "another_one": 3990610.13639,
+    "yet_another_param": {
+        "name": "amet"
+    },
+    "even_more_param": [
+        160895437.203
+    ],
+    "book": {
+        "name": "ipsam",
+        "author_id": 13,
+        "pages_count": 12
+    },
+    "ids": [
+        18
+    ],
+    "users": [
+        {
+            "first_name": "John",
+            "last_name": "Doe"
+        }
+    ]
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 4,
+    "name": "Jessica Jones",
+    "roles": [
+        "admin"
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/prueba</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user_id</td>
+<td>integer</td>
+<td>required</td>
+<td>The id of the user.</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>string</td>
+<td>optional</td>
+<td>The id of the room.</td>
+</tr>
+<tr>
+<td>forever</td>
+<td>boolean</td>
+<td>optional</td>
+<td>Whether to ban the user forever.</td>
+</tr>
+<tr>
+<td>another_one</td>
+<td>number</td>
+<td>optional</td>
+<td>Just need something here.</td>
+</tr>
+<tr>
+<td>yet_another_param</td>
+<td>object</td>
+<td>required</td>
+<td>Some object params.</td>
+</tr>
+<tr>
+<td>yet_another_param.name</td>
+<td>string</td>
+<td>required</td>
+<td>Subkey in the object param.</td>
+</tr>
+<tr>
+<td>even_more_param</td>
+<td>array</td>
+<td>optional</td>
+<td>Some array params.</td>
+</tr>
+<tr>
+<td>even_more_param.*</td>
+<td>float</td>
+<td>optional</td>
+<td>Subkey in the array param.</td>
+</tr>
+<tr>
+<td>book.name</td>
+<td>string</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>book.author_id</td>
+<td>integer</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>book[pages_count]</td>
+<td>integer</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>ids.*</td>
+<td>integer</td>
+<td>optional</td>
+</tr>
+<tr>
+<td>users.*.first_name</td>
+<td>string</td>
+<td>optional</td>
+<td>The first name of the user.</td>
+</tr>
+<tr>
+<td>users.*.last_name</td>
+<td>string</td>
+<td>optional</td>
+<td>The last name of the user.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_d0737fa8cfaf9ee16dc9becbb3085fd9 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
