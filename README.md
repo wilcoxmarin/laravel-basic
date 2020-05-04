@@ -46,18 +46,18 @@ con esos comando ya tiene levantado tus tres contenedores el docker tiene como b
 
 Ya el proyecto tiene las configuracion base solo debes modificar el environment que tienes sus variables a configurar que son:
 
-*PUSHER_APP_ID=
-*PUSHER_APP_KEY=
-*PUSHER_APP_SECRET=
-*PUSHER_APP_CLUSTER=
-*PUSHER_APP_HOST=
-*PUSHER_APP_SCHEME=http
+* PUSHER_APP_ID=
+* PUSHER_APP_KEY=
+* PUSHER_APP_SECRET=
+* PUSHER_APP_CLUSTER=
+* PUSHER_APP_HOST=
+* PUSHER_APP_SCHEME=http
 
 esta configuracion es opcional si trabajar con certificados debes ponerlo en estas variables.
 
-*LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT=
-*LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=
-*LARAVEL_WEBSOCKETS_SSL_PASSPHRASE=
+* LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT=
+* LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=
+* LARAVEL_WEBSOCKETS_SSL_PASSPHRASE=
 
 # API Documentation
 
